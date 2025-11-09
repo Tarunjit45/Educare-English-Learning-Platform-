@@ -1,0 +1,5 @@
+{
+  "name": "EduCare: English Learning Center",
+  "description": "An AI-powered English learning application that generates personalized quizzes from uploaded texts or images. Students can select their class level, get questions on comprehension and grammar, and receive instant AI-powered scoring and feedback.",
+  "requestFramePermissions": []
+}
