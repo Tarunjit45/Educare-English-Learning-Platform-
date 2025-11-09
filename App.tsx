@@ -7,6 +7,7 @@ import GeneratedQuestionsView from './components/GeneratedQuestionsView';
 import Loader from './components/Loader';
 import { extractTextFromFile, generateMCQs, generateSAQs, generateMCQsForSem1And3, generateSAQsForSem2And4, generateBroadsForSem2And4, generateGrammarForSem2And4 } from './services/geminiService';
 import SemesterSelector from './components/SemesterSelector';
+import Footer from './components/Footer';
 
 type AppState = 'SELECT_CLASS' | 'SELECT_SEMESTER' | 'UPLOAD_CONTENT' | 'GENERATING_QUESTIONS' | 'VIEW_QUESTIONS';
 
@@ -118,13 +119,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
+    <div className="min-h-screen bg-gray-50 font-sans text-gray-800 flex flex-col">
       <Header onHomeClick={handleRestart} />
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-grow">
         <div className="max-w-4xl mx-auto">
           {renderContent()}
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
